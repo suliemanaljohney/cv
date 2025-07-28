@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Toulen Lamak Khudur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .decorative-header {
+            height: 10px;
+            background: linear-gradient(90deg, #6c63ff 0%, #ff6584 100%);
+        }
+        
+        .content-wrapper {
+            padding: 40px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #6c63ff 0%, #ff6584 100%);
+            border-radius: 3px;
+        }
+        
+        .header-info {
+            flex: 1;
+        }
+        
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-left: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+        
+        .title {
+            font-size: 20px;
+            color: #6c63ff;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, #6c63ff 0%, #ff6584 100%);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            background: rgba(108, 99, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(108, 99, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: #6c63ff;
+            font-size: 16px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #6c63ff 0%, #ff6584 100%);
+            border-radius: 3px;
+        }
+        
+        .section-title i {
+            margin-right: 15px;
+            color: #6c63ff;
+            background: rgba(108, 99, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .section-content {
+            padding-left: 55px;
+        }
+        
+        .item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #6c63ff;
+            border: 2px solid rgba(108, 99, 255, 0.3);
+        }
+        
+        .item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 25px;
+            bottom: -25px;
+            width: 2px;
+            background: rgba(108, 99, 255, 0.2);
+        }
+        
+        .item:last-child::after {
+            display: none;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+        
+        .item-subtitle {
+            color: #4a5568;
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .item-date {
+            color: white;
+            font-size: 14px;
+            background: linear-gradient(90deg, #6c63ff 0%, #ff6584 100%);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .item-description {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        
+        .item-description ul {
+            list-style-position: outside;
+            padding-left: 20px;
+        }
+        
+        .item-description li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .item-description li::before {
+            content: '▹';
+            position: absolute;
+            left: -20px;
+            color: #6c63ff;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .skill {
+            background: linear-gradient(135deg, #6c63ff 0%, #a855f7 100%);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+        }
+        
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .skill:hover, .contact-item:hover {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-img {
+                margin: 20px auto;
+            }
+            
+            .title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .section-content {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decorative-header"></div>
+        <div class="content-wrapper">
+            <div class="header">
+                <div class="header-info">
+                    <h1 class="name">Toulen Lamak Khudur</h1>
+                    <h2 class="title">Public Relations Manager</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>toulenkh.12@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+962-697-336</span>
+                        </div>
+                    </div>
+                </div>
+                <img src="Untitled.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Personal Profile
+                </h3>
+                <div class="section-content">
+                    <p>Ambitious and effective professional in public relations and content creation, with experience in customer relations, administrative coordination, and managing purchasing processes and external communications. I excel in flexibility and working under pressure, with additional expertise in fashion and social media, particularly on Instagram, where I'm skilled at conveying desired images and enhancing digital presence for organizations.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Professional Experience
+                </h3>
+                <div class="section-content">
+                    <div class="item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">External Planning and Purchasing Manager</div>
+                                <div class="item-subtitle">Abu Ras Import & Export Company</div>
+                            </div>
+                            <div class="item-date">2022 - 2024</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Coordinated shipments and dealt with international suppliers</li>
+                                <li>Managed email correspondence and official external communications</li>
+                                <li>Oversaw business relationships between branches in Syria and Egypt</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Customer Service Manager</div>
+                                <div class="item-subtitle">TOY Store - Tartous</div>
+                            </div>
+                            <div class="item-date">2021 - 8 months</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Supervised an entire floor of the store</li>
+                                <li>Ensured customer service quality and operational organization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Internal Sales Manager</div>
+                                <div class="item-subtitle">Bombelo Clothing Agency - Tartous</div>
+                            </div>
+                            <div class="item-date">2020 - 6 months</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Coordinated clothing displays and customer interactions</li>
+                                <li>Managed internal sales and reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Secretary</div>
+                                <div class="item-subtitle">Neurology Clinic</div>
+                            </div>
+                            <div class="item-date">3 months</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Scheduled appointments and received patients</li>
+                                <li>Organized daily clinic records</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">
+                    <i class="fas fa-star"></i>
+                    Skills
+                </h3>
+                <div class="section-content">
+                    <div class="skills">
+                        <span class="skill">Digital Marketing</span>
+                        <span class="skill">Communication Skills</span>
+                        <span class="skill">Customer Service</span>
+                        <span class="skill">Problem Solving</span>
+                        <span class="skill">Time Management</span>
+                        <span class="skill">Leadership & Teamwork</span>
+                        <span class="skill">Creativity & Planning</span>
+                        <span class="skill">Persuasion</span>
+                        <span class="skill">Work Under Pressure</span>
+                        <span class="skill">Fast Learning & Development</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">
+                    <i class="fas fa-certificate"></i>
+                    Certifications
+                </h3>
+                <div class="section-content">
+                    <div class="item">
+                        <div class="item-title">International ICDL Certificate</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">Advanced Excel Program Certificate</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">Human Resources Certificate (Certified by Foreign Ministry)</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">Accounting Course on Al-Ameen Program</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">
+                    <i class="fas fa-language"></i>
+                    Languages
+                </h3>
+                <div class="section-content">
+                    <div class="item">
+                        <div class="item-title">Arabic: Native</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">English: Intermediate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
